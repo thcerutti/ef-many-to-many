@@ -5,8 +5,6 @@ using ManyToMany.Models;
 Console.WriteLine("Hello, World!");
 
 using var context = new StoreContext();
-context.Database.EnsureCreated();
-
 context.Products.ToList().ForEach(p => context.Products.Remove(p));
 context.Categories.ToList().ForEach(c => context.Categories.Remove(c));
 
